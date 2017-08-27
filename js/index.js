@@ -29,10 +29,23 @@
 						console.log(nombre+' '+idioma+' '+duracion+' '+descripcion);
 
 						$('#data-xml').append(
-							'<li> Nombre:'+nombre+'</li>'+
-							'<li> Idioma:'+idioma+'</li>'+
-							'<li> Duración:'+duracion+'</li>'+
-							'<li> Descripción:'+descripcion+'</li><hr/>'
+
+							'<div class="box">'+
+  								'<article class="media">'+
+								    '<div class="media-content">'+
+								      	'<div class="content">'+
+								        	'<p>'+
+								          		'<li> <strong>Nombre:</strong> '+nombre+'</li>'+
+												'<li> <strong>Idioma:</strong> '+idioma+'</li>'+
+												'<li> <strong>Duración:</strong> '+duracion+'</li>'+
+												'<li> <strong>Descripción:</strong> '+descripcion+'</li>'+
+												'<br>'+
+								        	'</p>'+
+								      	'</div>'+
+								    '</div>'+
+  								'</article>'+
+							'</div>'
+
 						);
 					});
 

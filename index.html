@@ -6,22 +6,21 @@
 	<title>Archivador</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	
 	<section class="hero is-dark is-warning is-fullheight">
   		<div class="hero-body">
     		<div class="container">
-      			<h1 class="title">
+      			<h1 class="title pad-1">
         			Archivador
       			</h1>
-      			<h2 class="subtitle">
+      			<h2 class="subtitle pad-1">
         			Para registrar una nueva pelicula complete todos los datos requeridos.
       			</h2>
 
-				<br>
-
-				<form action="add.php" method="post">
+				<form action="add.php" method="post" class="pad-4">
 
 	      			<div class="field is-horizontal">
 	  					<div class="field-label is-normal">
@@ -111,17 +110,12 @@
 					</div>
     		
 				</form>
-				
-				<br>
-				<br>
 
-				<h2 class="subtitle">
+				<h2 class="subtitle pad-1">
         			Para conocer las peliculas registradas seleccione una categoria.
       			</h2>
-				
-				<br>
 
-				<div class="field is-horizontal">
+				<div class="field is-horizontal pad-1">
 				  	<div class="field-label is-normal">
 				    	<label class="label">Categorias disponibles:</label>
 				  	</div>
@@ -135,14 +129,8 @@
 				    	</div>
 				  	</div>
 				</div>
-				
-				<br>
 
-				<div id="data-xml"></div>
-
-				<br>
-				<br>
-				<br>
+				<div id="data-xml" class="pad-4"></div>
 
     		</div>
   		</div>
