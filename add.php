@@ -1,26 +1,27 @@
 <?php 
 	if (isset($_POST['add'])) {
 
-		$archivo = 'xml/archivo1.xml';
+		$categoria = $_POST['categoria'];
+		$archivo = 'xml/'.$categoria.'.xml';
 
 		if (file_exists($archivo)) {
 
 			$xml = new DomDocument("1.0", "UTF-8");
 			$xml->formatOutput = true;
 			$xml->preserveWhiteSpace = false;
-			$xml->load("xml/archivo1.xml");
+			$xml->load($archivo);
 
 			$a = $_POST['nombre'];
 
-			$personas = $xml->firstChild;
+			$coleccion = $xml->firstChild;
 
-			$persona = $xml->createElement('persona');
-			$personas->appendChild( $persona );
+			$pelicula = $xml->createElement('pelicula');
+			$coleccion->appendChild( $pelicula );
 			
 			$nombre = $xml->createElement('nombre', $a);
-			$persona->appendChild( $nombre );
+			$pelicula->appendChild( $nombre );
 
-			$xml->save('xml/archivo1.xml'); 
+			$xml->save($archivo); 
 
 			echo "existe";
 
@@ -32,16 +33,16 @@
 
 			$a = $_POST['nombre'];
 
-			$personas = $xml->createElement("personas");
-			$xml->appendChild($personas);
+			$coleccion = $xml->createElement("colección");
+			$xml->appendChild($coleccion);
 
-			$persona = $xml->createElement('persona');
-			$personas->appendChild( $persona );
+			$pelicula = $xml->createElement('pelicula');
+			$coleccion->appendChild( $pelicula );
 			
 			$nombre = $xml->createElement('nombre', $a);
-			$persona->appendChild( $nombre );
+			$pelicula->appendChild( $nombre );
 
-			$xml->save('xml/archivo1.xml'); 
+			$xml->save($archivo); 
 
 			echo "no existe";
 
