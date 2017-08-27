@@ -5,96 +5,26 @@
 	<title>Archivador</title>
 </head>
 <body>
+	
 	<form action="add.php" method="post">
 		<input type="text" name="categoria" placeholder="Categoria" required>
 		<input type="text" name="nombre" placeholder="Nombre" required>
+		<input type="text" name="idioma" placeholder="Idioma" required>
+		<input type="text" name="duracion" placeholder="Duración" required>
+		<input type="text" name="descripcion" placeholder="Descripción" required>
 		<input type="submit" name="add" value="Insertar">
 	</form>
 
 	<div class="selector-categoria">
-		<label>Selecciona una categoria: </label>
+		<label>Categorias disponibles: </label>
 		<select name="seleccion" id="seleccion"></select>
 	</div>
 
-	<button id="load-xml">Cargar XML</button>
 	<div id="data-xml"></div>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	
-	<script type="text/javascript">
-		$(document).ready(function() {
-         	$.ajax({
-                type: "POST",
-                url: "get.php",
-                success: function(response)
-                {
-                	$('.selector-categoria select').html(response).fadeIn();
-                }
-            });
-
-            $('#load-xml').click(function(){
-
-				$('#data-xml').empty();
-
-				$.ajax({
-					url: 'xml/Terror.xml',
-					dataType: 'XML',
-					success: procesarXML
-				});
-
-				function procesarXML(data){
-					$(data).find('pelicula').each(function(){
-						var nombre = $(this).find('nombre').text();
-						//var sexo = $(this).find('sexo').text();
-						//var raza = $(this).find('raza').text();
-
-						//console.log(nombre+' '+sexo+' '+raza);
-
-						$('#data-xml').append(
-							'<li> Nombre:'+nombre+'</li>'//+
-							//'<li> Sexo:'+sexo+'</li>'+
-							//'<li> Raza:'+raza+'</li><hr/>'
-						);
-					});
-				//alert('Funciona XML');
-				//console.log(xml);
-				}
-			});
-
-			$('select#seleccion').on('change',function(){
-    			var valor = $(this).val();
-    			alert(valor);
-
-    			$('#data-xml').empty();
-
-				$.ajax({
-					url: 'xml/'+valor,
-					dataType: 'XML',
-					success: procesarXML
-				});
-
-				function procesarXML(data){
-					$(data).find('pelicula').each(function(){
-						var nombre = $(this).find('nombre').text();
-						//var sexo = $(this).find('sexo').text();
-						//var raza = $(this).find('raza').text();
-
-						//console.log(nombre+' '+sexo+' '+raza);
-
-						$('#data-xml').append(
-							'<li> Nombre:'+nombre+'</li>'//+
-							//'<li> Sexo:'+sexo+'</li>'+
-							//'<li> Raza:'+raza+'</li><hr/>'
-						);
-					});
-				//alert('Funciona XML');
-				//console.log(xml);
-				}
-
-			});
-
-        });
-    </script>
+	<script type="text/javascript" src="js/index.js"></script>
 
 </body>
 </html>

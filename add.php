@@ -13,6 +13,9 @@
 			$xml->load($archivo);
 
 			$a = $_POST['nombre'];
+			$b = $_POST['idioma'];
+			$c = $_POST['duracion'];
+			$d = $_POST['descripcion'];
 
 			$coleccion = $xml->firstChild;
 
@@ -21,10 +24,16 @@
 			
 			$nombre = $xml->createElement('nombre', $a);
 			$pelicula->appendChild( $nombre );
+			$idioma = $xml->createElement('idioma', $b);
+			$pelicula->appendChild( $idioma );
+			$duracion = $xml->createElement('duracion', $c);
+			$pelicula->appendChild( $duracion );
+			$descripcion = $xml->createElement('descripcion', $d);
+			$pelicula->appendChild( $descripcion );
 
 			$xml->save($archivo); 
 
-			echo "existe";
+			echo "Elemento Archivado Correctamente";
 
 		}else {
 
@@ -33,6 +42,9 @@
 			$xml->preserveWhiteSpace = false;
 
 			$a = $_POST['nombre'];
+			$b = $_POST['idioma'];
+			$c = $_POST['duracion'];
+			$d = $_POST['descripcion'];
 
 			$coleccion = $xml->createElement("colección");
 			$xml->appendChild($coleccion);
@@ -42,10 +54,16 @@
 			
 			$nombre = $xml->createElement('nombre', $a);
 			$pelicula->appendChild( $nombre );
+			$idioma = $xml->createElement('idioma', $b);
+			$pelicula->appendChild( $idioma );
+			$duracion = $xml->createElement('duracion', $c);
+			$pelicula->appendChild( $duracion );
+			$descripcion = $xml->createElement('descripcion', $d);
+			$pelicula->appendChild( $descripcion );
 
 			$xml->save($archivo); 
 
-			echo "no existe";
+			echo "Elemento Archivado Correctamente";
 
 		}
 	}
