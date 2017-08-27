@@ -1,4 +1,5 @@
 <?php 
+
 	if (isset($_POST['add'])) {
 
 		$categoria = $_POST['categoria'];
@@ -48,4 +49,5 @@
 
 		}
 	}
+	
  ?>
