@@ -2,10 +2,166 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Archivador</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
 </head>
 <body>
 	
+	<section class="hero is-dark is-warning is-fullheight">
+  		<div class="hero-body">
+    		<div class="container">
+      			<h1 class="title">
+        			Archivador
+      			</h1>
+      			<h2 class="subtitle">
+        			Para registrar una nueva pelicula complete todos los datos requeridos.
+      			</h2>
+
+				<br>
+				<br>
+
+				<form action="add.php" method="post">
+
+	      			<div class="field is-horizontal">
+	  					<div class="field-label is-normal">
+	    					<label class="label">Categoria</label>
+	  					</div>
+	  					<div class="field-body">
+	    					<div class="field">
+	      						<p class="control is-expanded has-icons-left">
+	        						<input class="input" type="text" name="categoria" placeholder="Categoria">
+	        						<span class="icon is-small is-left">
+	          							<i class="fa fa-user"></i>
+	        						</span>
+	      						</p>
+	    					</div>
+	  					</div>
+					</div>
+
+					<div class="field is-horizontal">
+	  					<div class="field-label is-normal">
+	    					<label class="label">Nombre</label>
+	  					</div>
+	  					<div class="field-body">
+	    					<div class="field">
+	      						<p class="control is-expanded has-icons-left">
+	        						<input class="input" type="text" name="nombre" placeholder="Nombre">
+	        						<span class="icon is-small is-left">
+	          							<i class="fa fa-user"></i>
+	        						</span>
+	      						</p>
+	    					</div>
+	  					</div>
+					</div>
+					<div class="field is-horizontal">
+	  					<div class="field-label is-normal">
+	    					<label class="label">Idioma</label>
+	  					</div>
+	  					<div class="field-body">
+	    					<div class="field">
+	      						<p class="control is-expanded has-icons-left">
+	        						<input class="input" type="text" name="idioma" placeholder="Idioma">
+	        						<span class="icon is-small is-left">
+	          							<i class="fa fa-user"></i>
+	        						</span>
+	      						</p>
+	    					</div>
+	  					</div>
+					</div>
+					<div class="field is-horizontal">
+	  					<div class="field-label is-normal">
+	    					<label class="label">Duración</label>
+	  					</div>
+	  					<div class="field-body">
+	    					<div class="field">
+	      						<p class="control is-expanded has-icons-left">
+	        						<input class="input" type="text" name="duracion" placeholder="Duración">
+	        						<span class="icon is-small is-left">
+	          							<i class="fa fa-user"></i>
+	        						</span>
+	      						</p>
+	    					</div>
+	  					</div>
+					</div>
+					<div class="field is-horizontal">
+	  					<div class="field-label is-normal">
+	    					<label class="label">Descripción</label>
+	  					</div>
+	  					<div class="field-body">
+	    					<div class="field">
+	      						<p class="control is-expanded has-icons-left">
+	        						<input class="input" type="text" name="descripcion" placeholder="Descripción">
+	        						<span class="icon is-small is-left">
+	          							<i class="fa fa-user"></i>
+	        						</span>
+	      						</p>
+	    					</div>
+	  					</div>
+					</div>
+
+					<div class="field is-horizontal">
+	  					<div class="field-label">
+	    					<!-- Left empty for spacing -->
+	  					</div>
+	  					<div class="field-body">
+	    					<div class="field">
+	      						<div class="control">
+	      							<input type="submit" class="button is-primary" name="add" value="Registrar">
+	      						</div>
+	    					</div>
+	  					</div>
+					</div>
+    		
+				</form>
+				
+				<br>
+				<br>
+
+				<h2 class="subtitle">
+        			Para conocer las peliculas registradas seleccione una categoria.
+      			</h2>
+				
+				<div class="field is-horizontal">
+				  	<div class="field-label is-normal">
+				    	<label class="label">Categorias disponibles:</label>
+				  	</div>
+				  	<div class="field-body">
+				    	<div class="field is-narrow">
+				      		<div class="control">
+				        		<div class="select is-fullwidth selector-categoria">
+									<select name="seleccion" id="seleccion"></select>
+								</div>
+				      		</div>
+				    	</div>
+				  	</div>
+				</div>
+
+				<div id="data-xml"></div>
+
+    		</div>
+  		</div>
+	</section>
+
+	<footer class="footer">
+	  	<div class="container">
+	    	<div class="content has-text-centered">
+	      		<p>
+	        		<strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+	        		<a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+	        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+	      		</p>
+	      		<p>
+	        		<a class="icon" href="https://github.com/jgthms/bulma">
+	          			<i class="fa fa-github"></i>
+	        		</a>
+	      		</p>
+	    	</div>
+	  	</div>
+	</footer>	
+
+<!--  
 	<form action="add.php" method="post">
 		<input type="text" name="categoria" placeholder="Categoria" required>
 		<input type="text" name="nombre" placeholder="Nombre" required>
@@ -21,7 +177,7 @@
 	</div>
 
 	<div id="data-xml"></div>
-
+-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	
 	<script type="text/javascript" src="js/index.js"></script>
