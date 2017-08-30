@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colección>
   <pelicula>
-    <nombre>El Aro</nombre>
-    <idioma>Ingles</idioma>
-    <duracion>120 min</duracion>
-    <descripcion>ajsdfo</descripcion>
-  </pelicula>
-  <pelicula>
     <nombre>El Conjuro</nombre>
     <idioma>Ingles</idioma>
-    <duracion>90 min</duracion>
-    <descripcion>Pelicula osa djaidif oasjdfie jasodjfa eojda foeja oejf</descripcion>
+    <duracion>112</duracion>
+    <descripcion>Basada en una historia real documentada por los reputados demonólogos Ed y Lorraine Warren. Narra los encuentros sobrenaturales que vivió la familia Perron en su casa de Rhode Island a principios de los 70. El matrimonio Warren, investigadores de renombre en el mundo de los fenómenos paranormales, acudieron a la llamada de esta familia aterrorizada por la presencia en su granja de un ser maligno.</descripcion>
   </pelicula>
 </colección>

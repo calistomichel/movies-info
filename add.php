@@ -83,28 +83,15 @@
  	<section class="hero is-dark is-warning is-fullheight">
   		<div class="hero-body">
     		<div class="container">
-      			<h1 class="title pad-1">
+      			<h1 class="title pad-bottom-1">
         			Archivador
       			</h1>
-      			<h2 class="subtitle pad-1">
+      			<h2 class="subtitle pad-bottom-2">
       				<?php
 						echo($php_respuesta);
 					?>
       			</h2>
-
-      				<div class="field is-horizontal">
-	  					<div class="field-label">
-	    					<!-- Left empty for spacing -->
-	  					</div>
-	  					<div class="field-body">
-	    					<div class="field">
-	      						<div class="control">
-									<a class="button is-primary" href="index.html">Volver atrás</a>
-	      						</div>
-	    					</div>
-	  					</div>
-					</div>
-
+      			<a class="button is-primary" href="index.html">Volver atrás</a>
     		</div>
   		</div>
 	</section>
