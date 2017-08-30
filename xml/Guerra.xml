@@ -20,4 +20,22 @@
 asdjfia &#13;
 asdf</descripcion>
   </pelicula>
+  <pelicula>
+    <nombre>pj</nombre>
+    <idioma>p</idioma>
+    <duracion>jo</duracion>
+    <descripcion>j</descripcion>
+  </pelicula>
+  <pelicula>
+    <nombre>ff</nombre>
+    <idioma>ff</idioma>
+    <duracion>ff</duracion>
+    <descripcion>ff</descripcion>
+  </pelicula>
+  <pelicula>
+    <nombre>fff</nombre>
+    <idioma>f</idioma>
+    <duracion>f</duracion>
+    <descripcion>f</descripcion>
+  </pelicula>
 </colección>

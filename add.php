@@ -1,3 +1,7 @@
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
 <?php 
 
 	if (isset($_POST['add'])) {
@@ -33,7 +37,10 @@
 
 			$xml->save($archivo); 
 
+			ob_start();
 			echo "Elemento Archivado Correctamente";
+			$php_respuesta = ob_get_contents();
+			ob_end_clean();
 
 		}else {
 
@@ -63,11 +70,60 @@
 
 			$xml->save($archivo); 
 
+			ob_start();
 			echo "Elemento Archivado Correctamente";
+			$php_respuesta = ob_get_contents();
+			ob_end_clean();
 
 		}
 	}
 
  ?>
 
- <a href="index.html">Volver atrás</a>
+ 	<section class="hero is-dark is-warning is-fullheight">
+  		<div class="hero-body">
+    		<div class="container">
+      			<h1 class="title pad-1">
+        			Archivador
+      			</h1>
+      			<h2 class="subtitle pad-1">
+      				<?php
+						echo($php_respuesta);
+					?>
+      			</h2>
+
+      				<div class="field is-horizontal">
+	  					<div class="field-label">
+	    					<!-- Left empty for spacing -->
+	  					</div>
+	  					<div class="field-body">
+	    					<div class="field">
+	      						<div class="control">
+									<a class="button is-primary" href="index.html">Volver atrás</a>
+	      						</div>
+	    					</div>
+	  					</div>
+					</div>
+
+    		</div>
+  		</div>
+	</section>
+
+	<footer class="footer">
+	  	<div class="container">
+	    	<div class="content has-text-centered">
+	      		<p>
+	        		<strong>Archivador</strong> by <a href="https://github.com/laloinsane">Michel Calisto</a>.
+	      		</p>
+	      		<p>
+	        		<a class="icon" href="https://github.com/laloinsane/archivador">
+	          			<i class="fa fa-github"></i>
+	        		</a>
+	      		</p>
+	    	</div>
+	  	</div>
+	</footer>	
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	
+	<script type="text/javascript" src="js/index.js"></script>
