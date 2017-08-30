@@ -12,4 +12,10 @@
     <duracion>120</duracion>
     <descripcion>Los agentes de policía Jenko (Channing Tatum) y Schmidt (Jonah Hill) tendrán que infiltrarse en un campus universitario para intentar desarticular una red de narcotráfico. Secuela de "Infiltrados en clase".</descripcion>
   </pelicula>
+  <pelicula>
+    <nombre>Liar Liar</nombre>
+    <idioma>Ingles</idioma>
+    <duracion>87</duracion>
+    <descripcion>Fletcher Reede es un abogado ambicioso y sin escrúpulos, que utiliza la mentira como un medio habitual de trabajo. Su hijo de cinco años, harto de promesas incumplidas, pide un deseo el día de su cumpleaños, que su padre no pueda mentir durante veinticuatro horas.</descripcion>
+  </pelicula>
 </colección>
