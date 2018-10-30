@@ -8,3 +8,7 @@ Web desarrollada para el almacenaje de información y su posterior exhibición (
 sudo chmod 777 xml/
 sudo chown www-data:www-data xml/*
 ```
+## Imágenes de demostración
+
+<img src="images/demo/demo_1.png">
+<img src="images/demo/demo_2.png">
