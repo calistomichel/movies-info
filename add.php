@@ -84,7 +84,7 @@
   		<div class="hero-body">
     		<div class="container">
       			<h1 class="title pad-bottom-1">
-        			Archivador
+				  Movies Info
       			</h1>
       			<h2 class="subtitle pad-bottom-2">
       				<?php
@@ -99,11 +99,11 @@
 	<footer class="footer">
 	  	<div class="container">
 	    	<div class="content has-text-centered">
-	      		<p>
-	        		<strong>Archivador</strong> by <a href="https://github.com/laloinsane">Michel Calisto</a>.
+			<p>
+	        		<strong>Movies Info</strong> by <a href="https://github.com/calistomichel" target="_blank">Calisto Michel</a>.
 	      		</p>
 	      		<p>
-	        		<a class="icon" href="https://github.com/laloinsane/archivador">
+	        		<a class="icon" href="https://github.com/calistomichel/movies-info" target="_blank">
 	          			<i class="fa fa-github"></i>
 	        		</a>
 	      		</p>
